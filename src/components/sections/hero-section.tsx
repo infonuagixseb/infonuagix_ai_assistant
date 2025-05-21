@@ -11,7 +11,7 @@ export default function HeroSection() {
             Welcome to Infonuagix
           </h1>
           <p className="text-lg md:text-xl text-foreground mb-8 max-w-xl mx-auto md:mx-0">
-            We embrace <span className="font-semibold text-primary">vibe coding</span> for web and mobile development, delivering quality, speed, and cost-effectiveness.
+            We embrace <span className="font-semibold text-primary">vibe coding</span> for chatbot, web and mobile development, delivering quality, speed, and cost-effectiveness.
             Explore our services or chat with our AI assistant to learn more!
           </p>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center md:justify-start">

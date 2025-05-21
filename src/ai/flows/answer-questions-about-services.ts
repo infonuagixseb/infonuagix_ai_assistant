@@ -32,7 +32,7 @@ const prompt = ai.definePrompt({
 
 Question: {{{question}}}
 
-Infonuagix embraces vibe coding for web and mobile development, providing a range of benefits to its clients:
+Infonuagix embraces vibe coding for chatbot, web and mobile development, providing a range of benefits to its clients:
 
 - Quality code and speedy delivery
 - Cost-effective solutions

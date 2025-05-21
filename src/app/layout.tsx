@@ -11,7 +11,7 @@ import SiteFooter from '@/components/layout/site-footer';
 
 export const metadata: Metadata = {
   title: 'Infonuagix AI Assistant',
-  description: 'Your partner in vibe coding for web and mobile development.',
+  description: 'Your partner in vibe coding for chatbot, web and mobile development.',
 };
 
 export default function RootLayout({

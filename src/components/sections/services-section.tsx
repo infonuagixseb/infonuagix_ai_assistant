@@ -11,7 +11,7 @@ const services: Service[] = [
   {
     icon: Wand2,
     title: "Vibe Coding",
-    description: "Crafting modern web and mobile applications with an intuitive and engaging user experience, focusing on the 'feel' and flow.",
+    description: "Crafting modern chatbot, web and mobile applications with an intuitive and engaging user experience, focusing on the 'feel' and flow.",
   },
   {
     icon: Zap,
