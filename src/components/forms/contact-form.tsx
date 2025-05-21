@@ -51,7 +51,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
     // Simulate API call
     // In a real app, this would be replaced with an actual API call to a backend or server action.
-    await new Promise(resolve => setTimeout(resolve, 5000)); 
+    await new Promise(resolve => setTimeout(resolve, 10000)); 
     
     console.log("Contact form submitted:", values); // For debugging
     toast({
