@@ -33,13 +33,13 @@ const testimonials: Testimonial[] = [
     imageHint: "academic professional"
   },
   {
-    name: "Alice Brown", // Placeholder, to be replaced
-    title: "Product Manager",
-    company: "Innovate Corp",
-    quote: "Cost-effective solutions without compromising on quality. Their team is responsive, highly skilled, and a pleasure to work with. They exceeded our expectations.",
+    name: "Eric Benzacar",
+    title: "Senior Solution and Application Architect | Consultant",
+    company: "", // Company can be added if specified by user
+    quote: "Over the laste 18 months, I've had the opportunity to work with Sebastien on a large scale project and have been very impressed with his ability to quickly learn an effectively apply new knowledge and techniques. He is not afraid of the unknown or of testing new technologies and is able to quickly diagnose errors and propose viable solutions. Sebastien would make an excellent addition to any development team.",
     imageUrl: "https://placehold.co/100x100.png",
     rating: 5,
-    imageHint: "smiling business person"
+    imageHint: "professional architect"
   },
 ];
 
