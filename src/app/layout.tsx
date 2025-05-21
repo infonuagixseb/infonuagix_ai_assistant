@@ -27,7 +27,7 @@ export default function RootLayout({
       */}
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased flex flex-col min-h-screen`}>
         <SiteHeader />
-        <main className="flex-grow container mx-auto px-4 py-8 overflow-hidden">
+        <main className="flex-grow container mx-auto px-4 py-8">
           {children}
         </main>
         <SiteFooter />

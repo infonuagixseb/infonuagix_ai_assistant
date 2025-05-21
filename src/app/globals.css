@@ -93,11 +93,11 @@
     @apply border-border;
   }
   html, body {
-    @apply overflow-hidden; /* Disable scrolling */
+    /* Scrolling is now enabled by default */
   }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-geist-sans); /* Ensures Geist Sans is default */
-    height: 100vh; /* Ensure body takes full viewport height */
+    /* min-height: 100vh; is handled by min-h-screen on body in layout.tsx */
   }
 }
