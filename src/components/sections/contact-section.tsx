@@ -1,6 +1,6 @@
 import ContactForm from '@/components/forms/contact-form';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 export default function ContactSection() {
   return (
@@ -23,6 +23,15 @@ export default function ContactSection() {
                   className="text-primary hover:underline font-medium"
                 >
                   sebastien.degrandpre@infonuagix.com
+                </a>
+              </p>
+              <p className="text-md mt-1 text-foreground">
+                Call us at:{' '}
+                <a
+                  href="tel:1-514-942-0259"
+                  className="text-primary hover:underline font-medium"
+                >
+                  1-514-942-0259
                 </a>
               </p>
             </CardHeader>
