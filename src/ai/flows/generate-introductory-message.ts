@@ -33,7 +33,7 @@ const prompt = ai.definePrompt({
   name: 'generateIntroductoryMessagePrompt',
   input: {schema: GenerateIntroductoryMessageInputSchema},
   output: {schema: GenerateIntroductoryMessageOutputSchema},
-  prompt: `Welcome to Infonuagix, {{userName}}! We specialize in vibe coding for chatbot, web and mobile development, offering quality code, speedy delivery, and cost-effective solutions. We also provide nearshoring in the EST zone, exceptional project management, dedicated product and client support, and bilingual capabilities in English and French. How can we help you today?`,
+  prompt: `Welcome to Infonuagix, valued Visitor! We specialize in vibe coding for NLWeb, chatbot, web and mobile development, offering quality code, speedy delivery, and cost-effective solutions. We also provide nearshoring in the EST zone, exceptional project management, dedicated product and client support, and bilingual capabilities in English and French. How can we help you today?`,
 });
 
 const generateIntroductoryMessageFlow = ai.defineFlow(
