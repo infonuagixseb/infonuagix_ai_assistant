@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BotMessageSquare } from 'lucide-react';
+import Image from 'next/image';
 
 export default function SiteHeader() {
   return (
@@ -7,7 +8,7 @@ export default function SiteHeader() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
           <BotMessageSquare size={32} />
-          <span>Infonuagix AI</span>
+          <Image src="/infonuagix_logo.png" alt="Infonuagix AI Logo" width={200} height={200} />
         </Link>
         <nav className="space-x-6">
            <Link href="#chatbot" className="text-foreground hover:text-primary transition-colors">Chatbot</Link>

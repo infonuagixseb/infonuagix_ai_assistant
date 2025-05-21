@@ -30,7 +30,7 @@ export default function HeroSection() {
             width={600} 
             height={400} 
             className="rounded-lg shadow-2xl"
-            data-ai-hint="chatbot logo"
+            data-ai-hint="chatbot icon"
             priority
           />
         </div>
