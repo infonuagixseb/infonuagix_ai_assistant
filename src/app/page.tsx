@@ -13,8 +13,18 @@ export default function Home() {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    // Ensure the page is at the very top when it mounts, instantly.
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+    // Scroll to the chatbot section
+    const chatbotSection = document.getElementById('chatbot');
+    if (chatbotSection) {
+      // Using a timeout to ensure the layout is stable and elements are rendered
+      // before attempting to scroll.
+      const timer = setTimeout(() => {
+        chatbotSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100); // A small delay (100ms)
+
+      return () => clearTimeout(timer); // Cleanup timeout on unmount
+    }
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
