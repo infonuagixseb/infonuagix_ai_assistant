@@ -9,10 +9,12 @@ import ChatbotSection from '@/components/sections/chatbot-section';
 
 export default function Home() {
   useEffect(() => {
-    // Removed scrolling logic.
-    // If you still want to handle hashes for navigation but without scrolling,
-    // you might need a different approach, e.g., updating component state based on hash
-    // and conditionally rendering or highlighting sections.
+    // Prevent browser/Next.js from automatically scrolling to an anchor or restoring scroll on load
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    // Ensure the page is at the very top when it mounts, instantly.
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
