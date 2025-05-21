@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function HeroSection() {
   return (
     <section id="hero" className="py-16 md:py-24">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 grid md:grid-cols-1 gap-12 items-center"> {/* Changed md:grid-cols-2 to md:grid-cols-1 */}
         <div className="text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight">
             Welcome to Infonuagix
@@ -23,17 +23,7 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="hidden md:block">
-          <Image 
-            src="https://placehold.co/600x400.png" 
-            alt="Infonuagix Chatbot Logo Representation" 
-            width={600} 
-            height={400} 
-            className="rounded-lg shadow-2xl"
-            data-ai-hint="chatbot icon"
-            priority
-          />
-        </div>
+        {/* Image removed from here */}
       </div>
     </section>
   );
