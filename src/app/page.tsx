@@ -9,8 +9,16 @@ import ChatbotSection from '@/components/sections/chatbot-section';
 
 export default function Home() {
   useEffect(() => {
-    // Ensure the page loads at the top
-    window.scrollTo(0, 0);
+    // Ensure the page loads at the top, even if other scripts or browser behavior
+    // tries to scroll after initial render (e.g., URL hash).
+    // Using setTimeout defers this to the end of the current execution queue.
+    const timerId = setTimeout(() => {
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      }
+    }, 0);
+
+    return () => clearTimeout(timerId); // Cleanup the timeout if component unmounts
   }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
