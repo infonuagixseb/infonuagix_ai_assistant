@@ -26,11 +26,11 @@ export default function HeroSection() {
         <div className="hidden md:block">
           <Image 
             src="https://placehold.co/600x400.png" 
-            alt="Infonuagix Abstract Representation" 
+            alt="Infonuagix Chatbot Logo Representation" 
             width={600} 
             height={400} 
             className="rounded-lg shadow-2xl"
-            data-ai-hint="abstract technology"
+            data-ai-hint="chatbot logo"
             priority
           />
         </div>
