@@ -13,8 +13,8 @@ export default function Home() {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    // Ensure the page is at the very top when it loads
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    // Any script-initiated scrolling on load has been removed.
+    // The browser, with scrollRestoration set to 'manual', will handle the initial view.
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
