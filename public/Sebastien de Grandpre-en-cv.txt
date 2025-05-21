@@ -1,0 +1,340 @@
+Sebastien de Grandpre
+Agentic AI Engineer
+Montreal, QC H1Y 2H2
+sdegrandpre75@gmail.com
++15149420259
+
+Looking for an Agentic AI or Software Engineer role.
+
+Experience 
+------------
+Generative AI Engineer (3 months, currently going through “The Complete Agentic AI Engineering Course (2025)” course on Udemy and will attend Ed Donner’s O’Reilly live training entitled “From Software Engineer to AI Data Scientist” after tomorrow) and Software Engineer (25 yrs in software development and architecture: RDBMS 25 yrs, Java 8 yrs, RESTful web services design 7 yrs, Spring Boot 4 yrs, Angular 2 yrs, Azure 2 yrs, AWS 1 yr, OpenShift 1 yr)
+
+Hobby
+-------
+Teaching software development and agentic programming to teenagers online. Question my resume chatbot about my experience: https://huggingface.co/spaces/sdegra/agentic_shop_conversation.
+
+Willing to work in-person or hybrid in Montreal or South Shore of Montreal, or remotely (EST timezone).
+
+Bilingual (EN/FR) Canadian citizen.
+________________________________________
+ 
+Work Experience
+Operations Analyst
+Pharmacie Martin Gilbert affilié à BioScript-Châteauguay, QC
+January 2025 to May 2025
+Migration of Microsoft Forms and Power Automate Flows from one tenant to another. Creation of custom Microsoft Dynamics Business Central (ERP) web services used in a Python script to generate a sales transactions report monthly.
+________________________________________
+Kafka/Spring Boot Software Developer
+Ticketmaster-Montréal, QC
+July 2024 to September 2024
+This contract was under my incorporation www.infonuagix.com
+I built a Spring Boot reactor which took JSON messages coming from Debezium, placing them on an Kafka topic that my reactor consumed to augment the messages with static data from a lookup in a MySQL db. The reactor then output converted the format into protobuf and output the messages into an output Kafka topic for another tem to consume. The goal of the project was to provide information on concert seats's availability in real-time for users.
+Tech stack: Gitlab, Spring Boot 3.3, Spring 6.1, Java 21, MySQL, Kafka, Prometheus, ElasticSearch, Spring Data, Grafana, Kibana, Docker.
+________________________________________
+Software Engineering Manager/Architect
+FortifyData-Saint-Rémi, QC
+March 2024 to April 2024
+This contract was under my incorporation www.infonuagix.com
+FortifyData was a fast paced, remote-first and startup-type environment.
+FortifyData helps every business, regardless of size, safeguard and defend themselves from cyber crime by providing the most comprehensive cyber risk management platform in the industry.
+I was the Engineering Manager/Architect, catalyzing a talented team of 4 developers, a DevOps engineer and a QA analyst and bringing novel ideas to scan clients' assets much more frequently. One of the ideas I had was a rolling-window approach to the cybersecurity posture score updated hourly instead of the all-or-nothing batch approach that was in place and took minimum a week to score.
+We were working on improving an automated cyber threat assessment SaaS platform.
+Technologies/Philosophy: Agile/Scrum, Jira, Confluence, IntelliJ IDEA, Code With Me (for pair programming), Java 11, Spring, Spring Boot, AngularJS, GitHub, Dynatrace, TeamCity, Amazon WorkSpaces, AWS, EC2, Aurora MySQL, CloudFront, Amazon Route 53, AWS Lambda, Tenable Nessus scanners
+________________________________________
+Professor
+CEGEP Marie-Victorin-Montréal, QC
+September 2023 to October 2023
+This contract was under my incorporation www.infonuagix.com
+I taught Cybersecurity and Computer Network Design at the college (21 hours/week).
+________________________________________
+Tech Lead/Solution Architect
+Loto-Québec-Montréal, QC
+July 2023 to September 2023
+This contract was under my incorporation www.infonuagix.com
+I was leading a team that developed a data mesh for Loto-Québec using Confluent Kafka (ie. KSQL, Spring Boot and AWS).
+Philosophy/Technologies/Tools:
+________________________________________
+Full-stack Developer
+Hydro Québec-Montréal, QC
+March 2023 to July 2023
+This contract was under my incorporation www.infonuagix.com
+I was part of a team that developed an application to generate Talend jobs in Databricks automatically. The application was coded in Java/Spring and Angular/NgRx.
+Philosophy/Technologies/Tools: Agile/Scrum, Java (Spring)
+________________________________________
+Software Developer/Architect
+Maçonnerie Gratton-Montréal, QC
+December 2022 to March 2023
+This contract was under my incorporation www.infonuagix.com
+I developed KPIs in PowerBI and integrated an in-house ERP coded in FileMaker with Trello's API for Maçonnerie Gratton.
+________________________________________
+Software Architect
+Desjardins-Montréal, QC
+September 2022 to December 2022
+This contract was under my incorporation www.infonuagix.com
+I was the Security and performance software architect at Desjardins for the NeXT-Property project (property insurance portal using EIS's Genesis software, which is coded in Java/Spring and uses Kafka and Cassandra with Oath2 and OIDC).
+________________________________________
+Technical Software Architect
+Sapiens-Saint-Rémi, QC
+January 2022 to September 2022
+This contract was under my incorporation www.infonuagix.com
+•	Helped answer technical questions in RFPs.
+•	Supervised one developer in CoreSuite, Sapiens' life insurance policies administration software.
+•	Integrated CoreSuite with multiple clients' systems architectures, respecting the ACORD standard.
+•	Migrated ID3 ancillary applications from Java 8 to 17. My colleague liked my web search approach to solving bugs.
+________________________________________
+Scientific Systems Developer
+Hydro Québec-Varennes, QC
+February 2021 to January 2022
+This contract was under my incorporation www.infonuagix.com
+Developed in the "Prévision de la demande" project (Quebec's electricity demand forecasting) using artificial intelligence (deep learning). Migrating code to Keras inside TensorFlow 2.
+Training the algorithm became ten times faster (10 hours to 1 hour), thanks to tf.distribute.Strategy, a TensorFlow 2 API to distribute training across multiple GPUs on the Azure Machine Learning platform.
+Philosophy/Technologies/Tools: Python, NumPy, Jupyter, Colabs, Anaconda, TensorFlow (GPU), Keras, Scikit-learn, Matplotlib, pandas, Time-series Generative Adversarial Networks (GanTS), DASH, Poetry, Azure Machine Learning, Azure Databricks, etc.
+________________________________________
+Solutions Architect
+Hydro Québec-Montréal, QC
+December 2020 to February 2021
+This contract was under my incorporation www.infonuagix.com
+•	Helped architecting the cloud-native solution of "Diagnostic Résidentiel Comparez-vous" (DRCV) in AWS for an application combining Java, Python and Angular.
+Philosophy/Technologies: Agile/Scrum, Java (Spring Boot 2), Python, Angular
+________________________________________
+Technical Lead/Solutions Architect
+Hydro Québec-Montréal, QC
+June 2019 to December 2020
+This contract was under my incorporation www.infonuagix.com
+I participated in Hydro-Québec's Java and Angular communities of practice. I also did a technological watch in Java / Spring / event-driven architecture.
+I developed Firebase cloud functions in Typescript in the project “Intégration des Systèmes et Inventaires pour la Gestion des Équipements (iSIGE). iSIGE is a mobile progressive web application (PWA with Angular) which allows contractors and employees to do the inventory and return their equipment.
+I was the tech lead of the team developing Module de Gestion des Configurations de Référence (MGCR), a custom web-based software to track changes in Hydro-Québec's servers in order to be compliant with NERC (standard required to sell electricity in the USA). Also, I trained the team to upgrade their back-end development skills.
+First page load went from 2 minutes to under a second!
+We were able to deliver a working application in an Openshift development environment that used Hibernate, HATEOAS and server-side as well as client-side pagination with a very good velocity every sprint afterwards: the velocity increased by 50%.
+Technologies:
+•	Java/Spring Boot 2, Spring Web MVC, Spring Data REST, Dynatrace
+________________________________________
+ERP Programmer-analyst
+Grass Valley-Montréal, QC
+January 2019 to May 2019
+This contract was under my incorporation www.infonuagix.com.
+ERP Programmer-analyst consultant for SimpliERP at Grass Valley (GV), a division of Belden
+•	Maintained and improved GV's ERP system (.Net/C#, SQL, Telerik, EPICOR).
+________________________________________
+Azure Serverless Developer/Solutions Architect
+Banque Nationale du Canada-Montréal, QC
+October 2018 to January 2019
+This contract was under my incorporation www.infonuagix.com.
+Azure Serverless Developer consultant for Conova at Banque Nationale du Canada
+•	Developed a virtual assistant chatbot in Microsoft Teams which would: 1) helpemployees in their routine tasks by answering their questions based on knowledge databases and 2) guide them in their career path based on interest and similar successful profiles.
+We went from envisioning to do batch style fetching daily (with timeouts at occasions when the number and size of messages was huge) to a near real-time flexible and fault-tolerant system!
+Technologies:
+•	Microsoft open source Custom Personal Assistant, Adaptive Cards, Azure serverless functions, Azure Event Grid, LUIS, Azure Cosmo DB, Stardog (enterprise knowledge graph), Azure DevOps, Microsoft Teams, Microsoft Flow, Azure Application Insights, Azure Active Directory Graph API
+________________________________________
+SOA Architect
+Bell-Montréal, QC
+April 2018 to September 2018
+This contract was under my incorporation www.infonuagix.com.
+SOA Architect consultant for Miipe at Bell Canada
+•	Guided / Lead a team of SOA (Service Oriented Architecture) developers (SOAP, REST, Microservices, Kafka)
+•	Compared IBM API Connect to RedHat 3Scale for Bell Canada to make the purchase of an API Management infrastructure.
+________________________________________
+Senior full-stack developer
+Ville de Montréal-Montréal, QC
+August 2017 to March 2018
+Permanent job.
+1.	Developed authentification microservices in Gluu.
+2.	Performed load tests with Locust on APIs
+3.	Developed the back-end of « Alerts API », the City of Montreal's alerting system to citizens (email/SMS) in Node.js and with RabbitMQ.
+4.	Added features to an in-house Oro (open-source CRM) bundle in PHP, Twig, Doctrine 2, Symfony 3.
+After my added feature, mayors were informed not hours later from the news or from citizens in their borough but from the alerting system immediately via email or SMS.
+Technologies:
+•	RabbitMQ, NGINX, Kong, Rancher, Kubernetes, ElasticSearch, Graylog, Prometheus, Node.js (TypeScript), ORO, Camunda
+________________________________________
+IT Solution Architect - Software and business intelligence
+Ville de Montréal-Montreal, QC
+February 2017 to August 2017
+Permanent job
+Water management:
+1.	Management of municipal assets system: new in-house RESTful API to interface SIMON, the City of Montreal's ERP legacy system, with Maximo (IBM's asset management solution).
+2.	Projects at the clean water treatment plant, secondary water network and waste treatment plant (IT solution architecture).
+3.	Water meters assets data: building an API and a front-end to display waterconsumption to Montreal business owners.
+We coded the endpoints only once and got both XML and JSON communication options!
+Technologies:
+•	API design and management + RESTful design
+•	Databases: relational and NoSQL, open source (MongoDB), commercial (Oracle)
+•	Programming languages: Javascript, TypeScript
+•	Software Development Lifecycle (SDLC), DevOps movement, Agile approach
+•	Code versioning (Git), continuous integration (Jenkins), automated unit testing
+•	Collaboration environment (HipChat)
+•	Container management (Docker, Kubernetese, Swarm, Mesos, etc.)
+•	Server-client development frameworks (Node.js, AngularJS)
+________________________________________
+IT Software Architect - Software and Business Intelligence
+Ville de Montréal-Montréal, QC
+August 2016 to February 2017
+Permanent job
+Public security and justice:
+1.	Replacement of the 67 fire station alerting systems (IT architecture and market analysis).
+2.	Upgrade of Artémis: the fire department's computer-aided dispatch system (technological advisor).
+3.	Decommissioning of an old private RF data communication system and migration to LTE (technological advisor).
+4.	Portable access control system which would be used on major incident sites by the police to control and monitor access of police officers, fire fighters, paramedics, etc. (market analysis of the hardware).
+5.	Display of the hearing schedule at the municipal court lobby on a vertical kiosk and on tablets placed at each courtroom's entrance (market analysis of the vertical kiosk).
+________________________________________
+Senior full-stack Java JEE programmer
+National Bank of Canada-Montreal, QC
+July 2014 to August 2016
+Permanent job
+Agile champion: responsible to bring the team from a Waterfall to an Agile environment.
+Integrator: Merging, building and deploying code for the different versions of SBIE being developed simultaneously.
+Programmer: Development and support (24/7 in rotation) of SBIE, the commercial transactional website for National Bank of Canada.
+Projects:
+1.	Assessment of the team's agile level
+2.	Sharing of beneficiaries to subsidiaries
+3.	Electronic statements
+4.	Remote Deposit Capture
+The performance and quality of my code was impressive: even the senior developer in the team said he would not have been able to code that. I explained the optimized logic thoroughly in a long comment paragraph in the code.
+Technologies:
+•	JEE, Unit tests with JUnit, Spring, Hibernate (XML mapping), Performance tracking tools to analyze network load, CSS 3, HTML 4, JSP, RAD 9.1, IBM Websphere, IBM Rational Team Concert (RTC), Agile environment with Sprints lasting 2 weeks.
+________________________________________
+Web programmer
+Loto-Québec-Montréal, QC
+April 2014 to June 2014
+Permanent job
+Development of the Espacejeux website (www.espacejeux.com) Agile, Scrum
+HTML, CSS, XHTML, Freemarker, Java J2EE, Javascript et jQuery Apache (Tomcat), JBoss, Jenkins, Maven, Spring, Spring MVC Relational database (Oracle)
+________________________________________
+IT Architect
+Content Management System (CMS)-Magnolia, AR
+January 2010 to June 2014
+This was under my incorporation BabezApps.
+•	IT architecture and management of the development of 3 mobile "Leon" Flash games for children for Radio-Canada with a team of 2 programmers.
+________________________________________
+System Analyst
+Walter Surface Technologies-Pointe-Claire, QC
+October 2013 to April 2014
+Permanent job
+•	Support the warehouse management system (WMS), distribution management system (DMS) and transportation management system (TMS) from Tecsys.
+•	Was trained to develop add-ons in Java to the WMS and DMS.
+•	Work with the field service management tool ServiceCEO.
+•	Use TOAD on Oracle and SQL Server to write SQL queries and PL/SQL functions/procedures.
+•	Use the AIX operating system (Unix).
+________________________________________
+Pentaho ETL Developer
+Acquisio-Brossard, QC
+April 2013 to October 2013
+Permanent job
+•	Develop optimal extract processes, transforming and loading (ETL) data using Pentaho Data Integration platform, Java, SVN and JUnit.
+•	Produce project management reports using Jira for the team of 3 ETL developers.
+The ETL could finally do everything we needed.
+________________________________________
+Solution Architect & Full-stack Java Programmer analyst
+Arborite-Lasalle, QC
+May 2010 to April 2013
+Permanent job.
+Architecture and development of a custom web-based portal acting as a bridge between an MRP running on a mainframe (MDSS) and an ERP system (Solomon) with one other programmer. The portal is the main system used by the manufacturing plant workers (150 employees) at Arborite.
+The procurement manager was very pleased with the result, increasing his productivity and accuracy as to when to best buy paper rolls.
+Infinite loops were avoided onward.
+Technologies/Philosophie: Java J2SE 7.0, Eclispe, OSGi, Hibernate (ORM), AJAX, jQuery, XHTML, CSS3, Freemarker, Jersey, Pentaho's Spoon ETL, SQL Server 2005, Magic Draw (UML), SVN (Subversion)
+________________________________________
+Business System Developer
+Beyond the Rack-Montréal, QC
+June 2009 to November 2009
+Permanent job:
+•	Develop a "Mini-ERP" in VBA which queries a MySQL relational database through optimized SQL queries.
+•	Build CRM software in C# which queries a MySQL relational database through optimized SQL queries.
+•	Get trained on NetSuite's web services (Visual Studio C#).
+•	Develop a bridge linking the transactional website to the NetSuite ERP with web services.
+The file was readable and my boss told me he would never had known how to do this!
+________________________________________
+Manager - Result and Analysis
+Bell-Montréal, QC
+February 2008 to June 2008
+Permanent job
+•	Verify the validity of the forecasting model of resources necessary for the smartcards swapping project.
+•	Create a MySQL relational database with indexes to optimize the execution time of SQL queries.
+•	Analyse and build Excel reports on the results of the call centers affiliated with Bell ExpressVu. The reports were taking the data from an Access relational database that I created, do some ETL on the data and separating calling agents into quartiles (done with a VBA macro).
+________________________________________
+Programmer-analyst - Proteomics Platform
+Génome Québec-Montréal, QC
+October 2003 to March 2006
+Permanent job
+•	Recieve and distribute the data analysis and data visualisation requests coming from biologists to a team of 8 bioinformaticians.
+•	Develop a LIMS (Laboratory Information Management System) and protein identification algorithm in Matlab that make very large proteomics data extraction, transformation and loading (ETL) into an Oracle 9i relational database with optimized SQL queries and stored procedures.
+•	Improve the efficiency, the identification precision, the data mining and data visualisation of proteins.
+•	Help in developing the database model and insure data integrity and SQL queries efficiency by programming PL/SQL procedures.
+•	Maintain the software code versions with CVS.
+•	Create a Microsoft® Office SharePoint® (MOSS) Portal page to manage the tasks and attach notes, documents, execution time estimates, etc.
+________________________________________
+IT Architect
+Aptisys Technologies-Montréal, QC
+January 2003 to October 2003
+This was under my company Aptisys Technologies
+I started a company in consulting for "mobile databases" design on electronic agendas (PocketPC) using embedded Visual Basic, ADOCE, PHP and MySQL relational database.
+•	Prototype software for real estate agents, allowing them to see all the houses for sale in a given territory on a handheld devices with color pictures!
+________________________________________
+Programmer-analyst - Genomics Platform
+Génome Québec-Montréal, QC
+January 2001 to December 2002
+Permanent job
+•	Develop empirical and statistical data analysis software to isolate genes in the programming language VBA for Excel.
+•	Develop a LIMS in VBA for Excel which makes SQL queries to a MySQL relational database with ADO.
+________________________________________
+Systems Engineer
+EDS Canada-Boisbriand, QC
+May 1997 to September 1998
+Permanent job.
+This was an internship at the GM plant in Boisbriand (Quebec).
+Develop software managing the source code of programmers in C on Unix.
+•	Improve the logic of a robot used to sequence cars on the assembly line in C on Unix.
+•	Translate Visual C++ software in French at the GM headquarters in Detroit.
+•	Support and improve the software application Quality Improvement System used to analyse the quality of cars built at the plant in C on Unix.
+________________________________________
+Education
+MBA in IT & Marketing
+HEC-Montréal, QC
+September 2004 to September 2006
+Bachelor in electrical engineering
+McGill University-Montréal, QC
+September 1995 to December 2000
+High School Diploma in Applied sciences
+Upper Canada College-Toronto, ON
+September 1992 to June 1994
+________________________________________
+Skills
+•	Container
+•	NoSQL
+•	CSS
+•	TypeScript
+•	JSON
+•	Telerik
+•	Angular
+•	Spring
+•	SDLC
+•	Connaissance du backend
+•	Authentification
+•	SQL
+•	Test unitaire
+________________________________________
+Links
+linkedin.com/in/sebastiendegrandpre
+________________________________________
+Certifications and Licenses
+Microsoft: Azure Fondamentals
+Present
+Amazon Web Services (AWS): Cloud Practitioner
+Present
+Angular Academy: Angular 2 certification
+Present
+DataCamp: Introduction to Python
+Present
+Collège de Maisonneuve: Bootstrap
+Present
+Baeldung: RESTful web services with Spring
+Present
+Collège de Maisonneuve: Azure administration
+Present
+Learn Spring: The Certification Class
+Present
+Technologia Formation: Spring
+Present
+Government of Canada: Secret Security Clearance
+May 2024 to May 2034
+________________________________________
+
