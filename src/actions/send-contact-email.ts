@@ -2,6 +2,7 @@
 'use server';
 
 import * as z from 'zod';
+import nodemailer from 'nodemailer';
 
 // Schema for validating form data on the server
 const contactFormSchema = z.object({
@@ -65,31 +66,39 @@ export async function sendContactEmailAction(
   console.log('Message:', message);
   console.log(`This email would be sent to: ${recipientEmail}`);
 
-  // --- Actual Email Sending Logic Would Go Here ---
-  // This is where you'd use a library like Nodemailer, Resend, SendGrid, AWS SES, etc.
-  // Example using a hypothetical emailService:
-  // try {
-  //   // await emailService.send({
-  //   //   to: recipientEmail,
-  //   //   from: 'noreply@yourdomain.com', // Use an email address verified with your email provider
-  //   //   subject: `New message from ${name} via Infonuagix Contact Form`,
-  //   //   html: `<h1>New Contact Message</h1>
-  //   //          <p><strong>Name:</strong> ${name}</p>
-  //   //          <p><strong>Email:</strong> ${email}</p>
-  //   //          <p><strong>Message:</strong></p>
-  //   //          <pre>${message}</pre>`, // Use <pre> for message to preserve formatting
-  //   // });
-  //   console.log('Email sending process simulated successfully.');
-  // } catch (e) {
-  //   console.error('Failed to send email (simulated):', e);
-  //   return {
-  //     message: 'Sorry, there was an issue sending your message. Please try again later.',
-  //     status: 'error',
-  //     errors: { _form: ['Failed to send email.'] },
-  //     submittedData: validatedFields.data,
-  //   };
-  // }
-  // --- End of Email Sending Logic ---
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || '587'), // Default SMTP port
+    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  try {
+    await transporter.sendMail({
+      to: recipientEmail,
+      from: process.env.EMAIL_FROM, // Use the environment variable for the 'from' address
+      subject: `New message from ${name} via Infonuagix Contact Form`,
+      html: `
+        <h1>New Contact Message</h1>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <pre>${message}</pre>
+      `, // Use <pre> for message to preserve formatting
+    });
+    console.log('Email sent successfully.');
+  } catch (e) {
+    console.error('Failed to send email:', e);
+    return {
+      message: 'Sorry, there was an issue sending your message. Please try again later.',
+      status: 'error',
+      errors: { _form: ['Failed to send email.'] },
+      submittedData: validatedFields.data,
+    };
+  }
 
   // Simulate network delay for the email sending process
   await new Promise(resolve => setTimeout(resolve, 2000)); // 2-second delay for simulation
