@@ -1,6 +1,6 @@
 import ContactForm from '@/components/forms/contact-form';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, Linkedin } from 'lucide-react'; // Added Linkedin icon
 
 export default function ContactSection() {
   return (
@@ -17,12 +17,12 @@ export default function ContactSection() {
                 Have a project in mind or want to learn more? Send us a message or request a consultation!
               </CardDescription>
               <p className="text-md mt-2 text-foreground">
-                Or email us directly at:{' '}
+                Email us directly at:{' '}
                 <a
-                  href="mailto:sebastien.degrandpre@infonuagix.com"
+                  href="mailto:sebastien.degrandpre@infonuagix.ai"
                   className="text-primary hover:underline font-medium"
                 >
-                  sebastien.degrandpre@infonuagix.com
+                  sebastien.degrandpre@infonuagix.ai
                 </a>
               </p>
               <p className="text-md mt-1 text-foreground">
@@ -32,6 +32,17 @@ export default function ContactSection() {
                   className="text-primary hover:underline font-medium"
                 >
                   1-514-942-0259
+                </a>
+              </p>
+              <p className="text-md mt-1 text-foreground flex items-center justify-center space-x-2">
+                <Linkedin className="w-5 h-5 text-accent" /> {/* Added Linkedin Icon */}
+                <a
+                  href="https://www.linkedin.com/in/s%C3%A9bastien-de-grandpr%C3%A9-2a087b1a2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-accent/90 font-medium hover:underline"
+                >
+                  Connect on LinkedIn
                 </a>
               </p>
             </CardHeader>
