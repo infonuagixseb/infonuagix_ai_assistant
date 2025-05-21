@@ -16,6 +16,15 @@ export default function ContactSection() {
               <CardDescription className="text-md mt-1">
                 Have a project in mind or want to learn more? Send us a message or request a consultation!
               </CardDescription>
+              <p className="text-md mt-2 text-foreground">
+                Or email us directly at:{' '}
+                <a
+                  href="mailto:sebastien.degrandpre@infonuagix.com"
+                  className="text-primary hover:underline font-medium"
+                >
+                  sebastien.degrandpre@infonuagix.com
+                </a>
+              </p>
             </CardHeader>
             <CardContent className="p-6 md:p-8">
               <ContactForm />
