@@ -1,6 +1,8 @@
+
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import Script from 'next/script'; // Import next/script
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import SiteHeader from '@/components/layout/site-header';
@@ -17,9 +19,9 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+ children: React.ReactNode;
 }>) {
-  return (
+ return (
     <html lang="en" suppressHydrationWarning>
       {/*
         Apply the CSS variables for GeistSans and GeistMono to the html or body tag.
@@ -32,6 +34,23 @@ export default function RootLayout({
         </main>
         <SiteFooter />
         <Toaster />
+
+        {/* Google tag (gtag.js) using next/script */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17103161663"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17103161663');
+          `}
+        </Script>
       </body>
     </html>
   );
