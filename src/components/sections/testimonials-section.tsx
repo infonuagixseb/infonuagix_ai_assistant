@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
 
 interface Testimonial {
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Michel Héon PhD",
     title: "Conseiller en architecture d'entreprise web sémantique",
-    company: "", // Company not specified for Michel Héon, can be added if provided
+    company: "",
     quote: "J'ai côtoyé Sébastien en tant que collègue dans le cadre d'un mandat critique d'une grande entreprise à Montréal. En plus d'être un informaticien chevronné avec un niveau de professionnalisme au-dessus de la moyenne, Sébastien possède des qualités humaines recherchées par les employeurs, il est à l'écoute des autres, confiant dans le travail qu'il fait sans être prétentieux, autonome et il possède l'esprit d'équipe essentiel au succès tout type de projets. C'est un homme de confiance duquel on a envie de s'inspirer. Je recommande Sébastien pour tous postes demandant les compétences d'un informaticien senior pour des projets demandant du travail d'équipe.",
     imageUrl: "https://placehold.co/100x100.png",
     rating: 5,
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Eric Benzacar",
     title: "Senior Solution and Application Architect | Consultant",
-    company: "", // Company can be added if specified by user
+    company: "",
     quote: "Over the laste 18 months, I've had the opportunity to work with Sebastien on a large scale project and have been very impressed with his ability to quickly learn an effectively apply new knowledge and techniques. He is not afraid of the unknown or of testing new technologies and is able to quickly diagnose errors and propose viable solutions. Sebastien would make an excellent addition to any development team.",
     imageUrl: "https://placehold.co/100x100.png",
     rating: 5,
@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
             <Card key={index} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-card flex flex-col transform hover:scale-105">
               <CardContent className="pt-8 pb-8 flex-grow flex flex-col items-center text-center">
                 <Avatar className="w-24 h-24 mb-5 border-4 border-primary shadow-lg">
-                  <AvatarImage src={testimonial.imageUrl} alt={testimonial.name} data-ai-hint={testimonial.imageHint} />
+                  {/* <AvatarImage src={testimonial.imageUrl} alt={testimonial.name} data-ai-hint={testimonial.imageHint} /> */}
                   <AvatarFallback className="text-lg bg-muted">{testimonial.name.substring(0,1)}{testimonial.name.split(' ')[1]?.substring(0,1) || ''}</AvatarFallback>
                 </Avatar>
                 <h3 className="text-xl font-semibold text-foreground">{testimonial.name}</h3>
