@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
@@ -14,16 +15,16 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Jane Doe",
-    title: "CEO",
-    company: "Tech Solutions Inc.",
-    quote: "Infonuagix delivered an exceptional product on time and within budget. Their vibe coding approach is truly innovative and brought our vision to life perfectly!",
+    name: "Dennis Leach",
+    title: "Manager / Lead Technical Analyst",
+    company: "Sapiens",
+    quote: "I started working with Sebastien a few months back when he joined Sapiens. He assisted in informal teaching regarding several java projects that we have. Everything that I needed help with (elementary to complex for me) he effortlessly guided to resolutions. I can understand why he is valued as an architect. While helping me with what I asked he noticed several things via casual observation that needed attention including security and future considerations regarding our projects. He was truly enjoyable to work with maintaining a move forward attitude while also relating personally with those with whom he was working. Thanks.",
     imageUrl: "https://placehold.co/100x100.png",
     rating: 5,
-    imageHint: "professional woman"
+    imageHint: "professional man"
   },
   {
-    name: "John Smith",
+    name: "John Smith", // Placeholder, to be replaced
     title: "CTO",
     company: "Startup Hub",
     quote: "The project management and bilingual support were game-changers for us. Communication was seamless, and they adapted to our needs quickly. Highly recommend Infonuagix.",
@@ -32,12 +33,12 @@ const testimonials: Testimonial[] = [
     imageHint: "tech professional man"
   },
   {
-    name: "Alice Brown",
+    name: "Alice Brown", // Placeholder, to be replaced
     title: "Product Manager",
     company: "Innovate Corp",
     quote: "Cost-effective solutions without compromising on quality. Their team is responsive, highly skilled, and a pleasure to work with. They exceeded our expectations.",
     imageUrl: "https://placehold.co/100x100.png",
-    rating: 5, // Adjusted rating for consistency
+    rating: 5, 
     imageHint: "smiling business person"
   },
 ];
