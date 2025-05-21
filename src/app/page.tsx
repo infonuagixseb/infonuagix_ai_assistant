@@ -20,7 +20,7 @@ export default function Home() {
       if (targetElement) {
         const timer = setTimeout(() => {
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 3000); // 3-second delay
+        }, 5000); // 5-second delay
 
         // Cleanup the timer if the component unmounts before the timeout fires
         return () => clearTimeout(timer);
