@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect } from 'react';
@@ -13,8 +14,11 @@ export default function Home() {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    // Any script-initiated scrolling on load has been removed.
-    // The browser, with scrollRestoration set to 'manual', will handle the initial view.
+    // Ensure the page is at the very top when it loads.
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    
+    // Any further script-initiated scrolling on load has been removed.
+    // The browser, with scrollRestoration set to 'manual', will handle the initial view (which we've set to top).
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
