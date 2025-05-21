@@ -24,13 +24,13 @@ const testimonials: Testimonial[] = [
     imageHint: "professional man"
   },
   {
-    name: "John Smith", // Placeholder, to be replaced
-    title: "CTO",
-    company: "Startup Hub",
-    quote: "The project management and bilingual support were game-changers for us. Communication was seamless, and they adapted to our needs quickly. Highly recommend Infonuagix.",
+    name: "Michel Héon PhD",
+    title: "Conseiller en architecture d'entreprise web sémantique",
+    company: "", // Company not specified for Michel Héon, can be added if provided
+    quote: "J'ai côtoyé Sébastien en tant que collègue dans le cadre d'un mandat critique d'une grande entreprise à Montréal. En plus d'être un informaticien chevronné avec un niveau de professionnalisme au-dessus de la moyenne, Sébastien possède des qualités humaines recherchées par les employeurs, il est à l'écoute des autres, confiant dans le travail qu'il fait sans être prétentieux, autonome et il possède l'esprit d'équipe essentiel au succès tout type de projets. C'est un homme de confiance duquel on a envie de s'inspirer. Je recommande Sébastien pour tous postes demandant les compétences d'un informaticien senior pour des projets demandant du travail d'équipe.",
     imageUrl: "https://placehold.co/100x100.png",
     rating: 5,
-    imageHint: "tech professional man"
+    imageHint: "academic professional"
   },
   {
     name: "Alice Brown", // Placeholder, to be replaced
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     company: "Innovate Corp",
     quote: "Cost-effective solutions without compromising on quality. Their team is responsive, highly skilled, and a pleasure to work with. They exceeded our expectations.",
     imageUrl: "https://placehold.co/100x100.png",
-    rating: 5, 
+    rating: 5,
     imageHint: "smiling business person"
   },
 ];
@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
                   <AvatarFallback className="text-lg bg-muted">{testimonial.name.substring(0,1)}{testimonial.name.split(' ')[1]?.substring(0,1) || ''}</AvatarFallback>
                 </Avatar>
                 <h3 className="text-xl font-semibold text-foreground">{testimonial.name}</h3>
-                <p className="text-sm text-muted-foreground mb-1">{testimonial.title}, {testimonial.company}</p>
+                <p className="text-sm text-muted-foreground mb-1">{testimonial.title}{testimonial.company ? `, ${testimonial.company}` : ''}</p>
                 <div className="flex my-3">
                   {renderStars(testimonial.rating)}
                 </div>
