@@ -9,23 +9,10 @@ import ChatbotSection from '@/components/sections/chatbot-section';
 
 export default function Home() {
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      // Ensure the page is at the top instantly on load when a hash is present
-      window.scrollTo({ top: 0, behavior: 'instant' });
-
-      const elementId = hash.substring(1); // Remove #
-      const targetElement = document.getElementById(elementId);
-
-      if (targetElement) {
-        const timer = setTimeout(() => {
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 5000); // 5-second delay
-
-        // Cleanup the timer if the component unmounts before the timeout fires
-        return () => clearTimeout(timer);
-      }
-    }
+    // Removed scrolling logic.
+    // If you still want to handle hashes for navigation but without scrolling,
+    // you might need a different approach, e.g., updating component state based on hash
+    // and conditionally rendering or highlighting sections.
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
