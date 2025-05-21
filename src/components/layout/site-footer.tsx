@@ -12,7 +12,7 @@ export default function SiteFooter() {
         <p className="text-sm">Innovative Chatbot, Web & Mobile Solutions with Vibe Coding.</p>
         {linkedInProfileUrl !== "#" && (
           <div className="mt-4">
-            <Link href={linkedInProfileUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+            <Link href={linkedInProfileUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:text-primary/90 transition-colors">
               <Linkedin size={20} className="mr-2" />
               Mon Profil LinkedIn
             </Link>
