@@ -1,130 +1,150 @@
+
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
+import { useEffect, useRef } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Send } from "lucide-react";
-import { useState } from "react";
+import { sendContactEmailAction, type ContactFormSubmissionState } from "@/actions/send-contact-email";
 
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }).max(100, {
-    message: "Name must not exceed 100 characters."
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }).max(500, {
-    message: "Message must not exceed 500 characters."
-  }),
-});
+const initialState: ContactFormSubmissionState = {
+  message: '',
+  status: 'idle',
+  errors: {},
+  submittedData: { name: '', email: '', message: ''}, // Initialize for defaultValue
+};
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-md hover:shadow-lg transition-all" disabled={pending}>
+      {pending ? (
+        <>
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          Sending...
+        </>
+      ) : (
+        <>
+          <Send className="mr-2 h-4 w-4" />
+          Send Message
+        </>
+      )}
+    </Button>
+  );
+}
 
 export default function ContactForm() {
+  const [formState, formAction] = useFormState(sendContactEmailAction, initialState);
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    // Simulate API call
-    // In a real app, this would be replaced with an actual API call to a backend or server action.
-    await new Promise(resolve => setTimeout(resolve, 10000)); 
-    
-    console.log("Contact form submitted:", values); // For debugging
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for reaching out. We'll get back to you as soon as possible.",
-      variant: "default", 
-    });
-    form.reset();
-    setIsSubmitting(false);
-  }
+  useEffect(() => {
+    if (formState.status === 'success') {
+      toast({
+        title: "Message Sent!",
+        description: formState.message,
+        variant: "default",
+      });
+      formRef.current?.reset();
+       // Manually clear state related to submittedData for next submission if needed,
+       // though formRef.current.reset() handles visual clearing.
+       // For a true reset of formState to initial for subsequent submissions without page reload,
+       // this would need more complex state management or a key prop on the form.
+    } else if (formState.status === 'error') {
+      if (formState.errors?._form) {
+         toast({
+            title: "Submission Error",
+            description: formState.errors._form.join(', '),
+            variant: "destructive",
+        });
+      } else if (formState.message && !formState.errors?.name && !formState.errors?.email && !formState.errors?.message) {
+        // Show a general error toast if there's a message but no specific field errors
+        toast({
+          title: "Error",
+          description: formState.message,
+          variant: "destructive",
+        });
+      }
+      // Field-specific errors are displayed below inputs, no separate toast for each.
+    }
+  }, [formState, toast]);
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <FormField
-          control={form.control}
+    <form ref={formRef} action={formAction} className="space-y-6">
+      <div>
+        <Label htmlFor="name">Full Name</Label>
+        <Input
+          id="name"
           name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Name</FormLabel>
-              <FormControl>
-                <Input placeholder="e.g., Jane Doe" {...field} disabled={isSubmitting} aria-required="true" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+          placeholder="e.g., Jane Doe"
+          defaultValue={initialState.submittedData?.name} // Use initial state for default or controlled if needed
+          aria-required="true"
+          aria-invalid={!!formState.errors?.name}
+          aria-describedby="name-error"
+          className={formState.errors?.name ? "border-destructive" : ""}
         />
-        <FormField
-          control={form.control}
+        {formState.errors?.name && (
+          <p id="name-error" className="text-sm font-medium text-destructive mt-1">
+            {formState.errors.name.join(", ")}
+          </p>
+        )}
+      </div>
+
+      <div>
+        <Label htmlFor="email">Email Address</Label>
+        <Input
+          id="email"
           name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email Address</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="you@example.com" {...field} disabled={isSubmitting} aria-required="true" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+          type="email"
+          placeholder="you@example.com"
+          defaultValue={initialState.submittedData?.email}
+          aria-required="true"
+          aria-invalid={!!formState.errors?.email}
+          aria-describedby="email-error"
+          className={formState.errors?.email ? "border-destructive" : ""}
         />
-        <FormField
-          control={form.control}
+        {formState.errors?.email && (
+          <p id="email-error" className="text-sm font-medium text-destructive mt-1">
+            {formState.errors.email.join(", ")}
+          </p>
+        )}
+      </div>
+
+      <div>
+        <Label htmlFor="message">Your Message</Label>
+        <Textarea
+          id="message"
           name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Your Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Tell us about your project, ask a question, or request a consultation..."
-                  className="min-h-[120px] resize-none"
-                  {...field}
-                  disabled={isSubmitting}
-                  aria-required="true"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+          placeholder="Tell us about your project, ask a question, or request a consultation..."
+          className={`min-h-[120px] resize-none ${formState.errors?.message ? "border-destructive" : ""}`}
+          defaultValue={initialState.submittedData?.message}
+          aria-required="true"
+          aria-invalid={!!formState.errors?.message}
+          aria-describedby="message-error"
         />
-        <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-md hover:shadow-lg transition-all" disabled={isSubmitting}>
-          {isSubmitting ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
-            </>
-          ) : (
-            <>
-              <Send className="mr-2 h-4 w-4" />
-              Send Message
-            </>
-          )}
-        </Button>
-      </form>
-    </Form>
+        {formState.errors?.message && (
+          <p id="message-error" className="text-sm font-medium text-destructive mt-1">
+            {formState.errors.message.join(", ")}
+          </p>
+        )}
+      </div>
+      
+      {/* Display general form error message, if not tied to specific fields and not already toasted */}
+      {formState.status === 'error' && formState.errors?._form && (
+         <p className="text-sm font-medium text-destructive text-center">
+            {formState.errors._form.join(", ")}
+          </p>
+      )}
+      {formState.status === 'error' && formState.message && !formState.errors && (
+         <p className="text-sm font-medium text-destructive text-center">
+            {formState.message}
+          </p>
+      )}
+      <SubmitButton />
+    </form>
   );
 }
