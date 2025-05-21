@@ -1,6 +1,6 @@
 import ContactForm from '@/components/forms/contact-form';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Mail, Phone, Linkedin } from 'lucide-react'; // Added Linkedin icon
+import { Mail, Phone } from 'lucide-react'; // Removed Linkedin icon import
 
 export default function ContactSection() {
   return (
@@ -35,7 +35,7 @@ export default function ContactSection() {
                 </a>
               </p>
               <p className="text-md mt-1 text-foreground flex items-center justify-center space-x-2">
-                <Linkedin className="w-5 h-5 text-accent" /> {/* Added Linkedin Icon */}
+                {/* LinkedIn icon removed from here */}
                 <a
                   href="https://www.linkedin.com/in/s%C3%A9bastien-de-grandpr%C3%A9-2a087b1a2/"
                   target="_blank"
