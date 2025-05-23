@@ -1,6 +1,6 @@
-import ContactForm from '@/components/forms/contact-form';
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Mail, Phone } from 'lucide-react'; // Removed Linkedin icon import
+import { Mail, Phone } from 'lucide-react';
 
 export default function ContactSection() {
   return (
@@ -14,10 +14,9 @@ export default function ContactSection() {
               </div>
               <CardTitle className="text-3xl font-bold text-primary">Get in Touch</CardTitle>
               <CardDescription className="text-md mt-1">
-                Have a project in mind or want to learn more? Send us a message or request a consultation!
+                Have a project in mind or want to learn more? Reach out directly!
               </CardDescription>
               <p className="text-md mt-2 text-foreground">
-                Email us directly at:{' '}
                 <a
                   href="mailto:sebastien.degrandpre@infonuagix.ai"
                   className="text-primary hover:underline font-medium"
@@ -26,7 +25,6 @@ export default function ContactSection() {
                 </a>
               </p>
               <p className="text-md mt-1 text-foreground">
-                Call us at:{' '}
                 <a
                   href="tel:1-514-942-0259"
                   className="text-primary hover:underline font-medium"
@@ -35,7 +33,6 @@ export default function ContactSection() {
                 </a>
               </p>
               <p className="text-md mt-1 text-foreground flex items-center justify-center space-x-2">
-                {/* LinkedIn icon removed from here */}
                 <a
                   href="https://www.linkedin.com/in/s%C3%A9bastien-de-grandpr%C3%A9-2a087b1a2/"
                   target="_blank"
@@ -47,7 +44,10 @@ export default function ContactSection() {
               </p>
             </CardHeader>
             <CardContent className="p-6 md:p-8">
-              <ContactForm />
+              {/* ContactForm removed */}
+              <p className="text-center text-muted-foreground">
+                Please feel free to contact us via email or phone for any inquiries.
+              </p>
             </CardContent>
           </Card>
         </div>
