@@ -20,17 +20,9 @@ export default function HeroSection() {
             >
               NLWeb
             </a>
-            , chatbot, web and mobile development, delivering quality, speed, and cost-effectiveness.
-            Explore our services or chat with our AI assistant to learn more!
+            , chatbot, web and mobile development, delivering quality, speed, and cost-effectiveness. We also teach software development and AI online.
+            Explore our services and contact us to learn more!
           </p>
-          <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center md:justify-start">
-            <Button asChild size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 shadow-md hover:shadow-lg transition-shadow">
-              <Link href="#chatbot">Chat with AI</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto text-primary border-primary hover:bg-primary/10 shadow-md hover:shadow-lg transition-shadow">
-              <Link href="#services">Our Services</Link>
-            </Button>
-          </div>
         </div>
         {/* Image removed from here */}
       </div>
